@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Inspection Schedule</h3>
+     <script>
+        function checkPassword() {
+            // Set your password here!
+            const correctPassword = "MySecretPassword123"; 
+            
+            const userPassword = prompt("Please enter the password to view this sheet:");
+
+            if (userPassword === correctPassword) {
+                // Show the sheet if the password is correct
+                document.getElementById('protected-content').style.display = 'block';
+                document.body.style.paddingTop = '20px'; // Reset padding
+            } else {
+                alert("Incorrect password. Access denied.");
+                window.location.href = "https://google.com"; // Redirect them away
+            }
+        }
+
+        // Run the password check as soon as the page starts loading
+        window.onload = checkPassword;
+    </script>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTvhPwpkhYf21IPD9K7YvmLZs9R3Wqc3tRv_saB1kJ193Uq4ejRAZC5OZlh_3cIYu0vIEaVy_F-Yv63/pubhtml?gid=0&single=true"></iframe>
+</body>
+</html>
+
+
+</body>
+</html>
